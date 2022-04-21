@@ -24,12 +24,12 @@
 
                 <img :src="img_data[image_index].image" alt="" class="principal">
 
-                <h5 class="title text-white">{{img_data[2].title}}</h5>
+                <h5 class="title text-white" v-html="img_data[image_index].title"></h5>
 
-                <p class="text_img text-white">{{img_data[2].text}}</p>
+                <p class="text_img text-white" v-html="img_data[image_index].text"></p>
 
                 <div class="thumbnails">
-                    <img :src="thumb.image" v-for="(thumb, i) in img_data" alt="">
+                    <img class="filter" :src="thumb.image" v-for="(thumb, i) in img_data" alt="" :class="image_index === i ? 'active' : '' ">
                     
                 </div>
 
