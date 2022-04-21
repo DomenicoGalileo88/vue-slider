@@ -50,14 +50,24 @@ img{
 
 .title{
     position: absolute;
-    bottom: 30%;
+    bottom: 20%;
     right: 30%;
 }
 
 .text_img{
+    width: 60%;
+    font-size: 11px;
     position: absolute;
-    bottom: 10%;
-    right: 30%;
+    bottom: 0;
+    right: 27%;
+}
+
+.filter{
+        filter: brightness(0.4);
+}
+
+.active{
+    filter: none;
 }
 
 
