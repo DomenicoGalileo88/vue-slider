@@ -4,3 +4,38 @@
     box-sizing: border-box;
 }
 
+img{
+    max-height: 100%;
+}
+
+.container_slider{
+    width: 700px;
+    margin: 2rem auto;
+}
+
+.thumbnails{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigator{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 22%;
+}
+
+.up, .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(211, 211, 211, 0.765);
+}
+
+
