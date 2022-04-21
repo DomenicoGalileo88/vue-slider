@@ -19,7 +19,10 @@ Bonus:
 const app = new Vue({
   el: "#app",
 
+  
   data: {
+    image_index: 0,
+
     img_data: [
       {
         image: "./assets/img/01.jpg",
@@ -48,5 +51,23 @@ const app = new Vue({
       },
     ],
   },
-  methods: {},
+  methods: {
+      nextImage(){
+        console.log('img next');
+        //console.log(this.img_data.length);
+        this.image_index++
+        if (this.image_index == this.img_data.length) {
+            this.image_index = 0
+        }
+       
+      },
+
+      downImage(){
+        console.log('img down');
+        if (this.image_index === 0) {
+            this.image_index = this.img_data.length
+        }
+        this.image_index--
+      }
+}
 });
