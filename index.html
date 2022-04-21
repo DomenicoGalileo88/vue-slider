@@ -29,7 +29,7 @@
                 <p class="text_img text-white" v-html="img_data[image_index].text"></p>
 
                 <div class="thumbnails">
-                    <img class="filter" :src="thumb.image" v-for="(thumb, i) in img_data" alt="" :class="image_index === i ? 'active' : '' ">
+                    <img @click="changeImg(index)" class="filter" :src="thumb.image" v-for="(thumb, index) in img_data" alt="" :class="image_index === index ? 'active' : '' ">
                     
                 </div>
 

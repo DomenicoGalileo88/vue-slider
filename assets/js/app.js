@@ -19,7 +19,6 @@ Bonus:
 const app = new Vue({
   el: "#app",
 
-  
   data: {
     image_index: 0,
 
@@ -52,22 +51,30 @@ const app = new Vue({
     ],
   },
   methods: {
-      downImage(){
-        console.log('img next');
-        //console.log(this.img_data.length);
-        this.image_index++
-        if (this.image_index == this.img_data.length) {
-            this.image_index = 0
-        }
-       
-      },
+    downImage() {
+      console.log("img next");
+      //console.log(this.img_data.length);
+      this.image_index++;
 
-      nextImage(){
-        console.log('img down');
-        if (this.image_index === 0) {
-            this.image_index = this.img_data.length
-        }
-        this.image_index--
+      if (this.image_index == this.img_data.length) {
+        this.image_index = 0;
       }
+    },
+
+    nextImage() {
+      console.log("img down");
+      if (this.image_index === 0) {
+        this.image_index = this.img_data.length;
+      }
+      this.image_index--;
+    },
+
+    changeImg(index){
+        const i_data = this.img_data[index]
+        console.log('clicked', index);
+        console.log(this.image_index);
+        this.image_index = index;
+    }
 }
+
 });
