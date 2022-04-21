@@ -52,7 +52,7 @@ const app = new Vue({
     ],
   },
   methods: {
-      nextImage(){
+      downImage(){
         console.log('img next');
         //console.log(this.img_data.length);
         this.image_index++
@@ -62,7 +62,7 @@ const app = new Vue({
        
       },
 
-      downImage(){
+      nextImage(){
         console.log('img down');
         if (this.image_index === 0) {
             this.image_index = this.img_data.length
