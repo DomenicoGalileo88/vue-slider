@@ -91,10 +91,9 @@ const app = new Vue({
       this.sliderTimerId = setInterval(this.nextImage, 2000);
     }
 },
-
+// con mounted prima che parte tutta l'istanza porte la funzione
 mounted(){
   console.log('Mounted');
-  
   this.startTimer()
 }
 
