@@ -20,6 +20,9 @@ const app = new Vue({
   el: "#app",
 
   data: {
+
+    //per ultimo bonus
+    sliderTimerId: null,
     image_index: 0,
 
     img_data: [
@@ -70,11 +73,29 @@ const app = new Vue({
     },
 
     changeImg(index){
-        const i_data = this.img_data[index]
-        console.log('clicked', index);
-        console.log(this.image_index);
+        //console.log('clicked indice img thumb', index);
+        //console.log(this.image_index);
         this.image_index = index;
+    },
+
+    autoPlay(){
+      this.image_index++;
+    },
+
+    pauseTimer(){
+      clearInterval(this.sliderTimerId)
+    },
+
+    startTimer(){
+      console.log('Start');
+      this.sliderTimerId = setInterval(this.nextImage, 2000);
     }
+},
+
+mounted(){
+  console.log('Mounted');
+  
+  this.startTimer()
 }
 
 });

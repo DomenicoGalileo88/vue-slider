@@ -14,7 +14,7 @@ img{
 }
 
 .principal{
-    width: 500px;
+    width: 580px;
     height: 323.94px;
 }
 
@@ -32,7 +32,7 @@ img{
     padding: 0.5rem;
     position: absolute;
     top: 0;
-    right: 22%;
+    right: 12%;
 }
 
 .up, .down{
@@ -47,7 +47,7 @@ img{
 .title{
     position: absolute;
     bottom: 20%;
-    right: 30%;
+    right: 20%;
 }
 
 .text_img{
@@ -55,7 +55,7 @@ img{
     font-size: 11px;
     position: absolute;
     bottom: 0;
-    right: 27%;
+    right: 17%;
 }
 
 .filter{
@@ -64,7 +64,7 @@ img{
 
 .active{
     filter: none;
-    transition: all 1s;
+    transition: all 0.7s;
 }
 
 

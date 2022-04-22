@@ -20,7 +20,7 @@
 
         <div class="container_slider">
 
-            <div class="card_slider d-flex position-relative">
+            <div @mouseover="pauseTimer" class="card_slider d-flex position-relative" @mouseout="startTimer">
 
                 <img :src="img_data[image_index].image" alt="" class="principal">
 
